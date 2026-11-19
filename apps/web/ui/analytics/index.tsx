@@ -2,8 +2,8 @@
 import { cn } from "@dub/utils";
 /* 
   This Analytics component lives in several different places:
-  1. Workspace analytics page, e.g. app.dub.co/dub/analytics
-  2. Public stats page, e.g. app.dub.co/share/dash_6NSA6vNm017MZwfzt8SubNSZ
+  1. Workspace analytics page, e.g. app.srb.gg/dub/analytics
+  2. Public stats page, e.g. app.srb.gg/share/dash_6NSA6vNm017MZwfzt8SubNSZ
 */
 
 import useWorkspace from "@/lib/swr/use-workspace";

@@ -40,7 +40,7 @@ export const transformLink = (
     tagId: tags?.[0]?.id ?? null, // backwards compatibility
     tags,
     webhookIds,
-    qrCode: `https://api.dub.co/qr?url=${link.shortLink}?qr=1`,
+    qrCode: `https://api.srb.gg/qr?url=${link.shortLink}?qr=1`,
     workspaceId: link.projectId ? prefixWorkspaceId(link.projectId) : null,
     ...(dashboard && { dashboardId: dashboard.id || null }),
   };

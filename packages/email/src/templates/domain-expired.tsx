@@ -114,7 +114,7 @@ export default function DomainExpired({
               again in the future, you can add {hasSingleDomain ? "it" : "them"}{" "}
               to your workspace anytime in the{" "}
               <Link
-                href={`https://app.dub.co/${workspace.slug}/links/domains`}
+                href={`https://app.srb.gg/${workspace.slug}/links/domains`}
                 className="font-semibold text-black underline"
               >
                 domain settings page

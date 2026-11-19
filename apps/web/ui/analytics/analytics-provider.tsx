@@ -152,7 +152,7 @@ export default function AnalyticsProvider({
         domain: domainSlug,
       };
     } else if (dashboardId) {
-      // Public stats page, e.g. app.dub.co/share/dsh_123
+      // Public stats page, e.g. app.srb.gg/share/dsh_123
       return {
         basePath: `/share/${dashboardId}`,
         baseApiPath: "/api/analytics/dashboard",
@@ -245,7 +245,7 @@ export default function AnalyticsProvider({
         saleUnit,
         view,
         queryString,
-        domain: domain || undefined, // domain for the link (e.g. dub.sh, stey.me, etc.)
+        domain: domain || undefined, // domain for the link (e.g. srb.gg, stey.me, etc.)
         key: key ? decodeURIComponent(key) : undefined, // link key (e.g. github, weathergpt, etc.)
         url: dashboardProps?.url, // url for the link (only for public stats pages)
         folderId: folderId || undefined, // id of the folder(s) to filter by

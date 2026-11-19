@@ -1,6 +1,11 @@
 import { logger } from "@/lib/axiom/server";
 import { transformMiddlewareRequest } from "@axiomhq/nextjs";
-import { API_HOSTNAMES, DEFAULT_REDIRECTS, isValidUrl } from "@dub/utils";
+import {
+  API_HOSTNAMES,
+  DEFAULT_REDIRECTS,
+  SHORT_DOMAIN,
+  isValidUrl,
+} from "@dub/utils";
 import { isAppHostname } from "@dub/utils/src/constants";
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 import { ApiMiddleware } from "./lib/middleware/api";
@@ -31,7 +36,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   logger.info(...transformMiddlewareRequest(req));
   ev.waitUntil(logger.flush());
 
-  // for app.dub.co
+  // for app.srb.gg
   if (isAppHostname(domain)) {
     return AppMiddleware(req);
   }
@@ -61,8 +66,8 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     }
   }
 
-  // default redirects for dub.sh
-  if (domain === "dub.sh" && DEFAULT_REDIRECTS[key]) {
+  // default redirects for the primary short domain
+  if (domain === SHORT_DOMAIN && DEFAULT_REDIRECTS[key]) {
     return NextResponse.redirect(DEFAULT_REDIRECTS[key]);
   }
 

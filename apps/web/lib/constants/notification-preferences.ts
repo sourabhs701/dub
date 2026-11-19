@@ -1,6 +1,6 @@
 // User-level notification preferences for email communications
 export const NOTIFICATION_PREFERENCE_TYPES = [
-  "dubLinks", // Dub Links product updates on app.dub.co
+  "dubLinks", // Dub Links product updates on app.srb.gg
 ] as const;
 
 export type NotificationPreferenceType =

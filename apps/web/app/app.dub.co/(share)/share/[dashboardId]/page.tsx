@@ -93,7 +93,7 @@ export default async function DashboardPage(props: {
     );
   }
 
-  const domain = data.link?.domain || "app.dub.co";
+  const domain = data.link?.domain || "app.srb.gg";
 
   return (
     <div className="flex min-h-screen flex-col justify-between bg-neutral-50/80">

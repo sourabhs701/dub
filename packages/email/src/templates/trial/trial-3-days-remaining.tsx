@@ -14,7 +14,7 @@ export default function Trial3DaysRemainingEmail({
   plan = "business",
   workspaceSlug = "acme",
 }: TrialMarketingEmailProps) {
-  const dashboardUrlPrefix = `https://app.dub.co/${workspaceSlug}`;
+  const dashboardUrlPrefix = `https://app.srb.gg/${workspaceSlug}`;
   return (
     <Html>
       <Head />
@@ -64,7 +64,7 @@ export default function Trial3DaysRemainingEmail({
         <Text style={footerStyle}>
           If you&apos;d like me to stop sending you emails, please{" "}
           <Link
-            href="https://app.dub.co/account/settings"
+            href="https://app.srb.gg/account/settings"
             style={footerLinkStyle}
           >
             click here

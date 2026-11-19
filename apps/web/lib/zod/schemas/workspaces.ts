@@ -146,7 +146,7 @@ export const WorkspaceSchema = z
       .array(z.string())
       .nullable()
       .describe("Specifies hostnames permitted for client-side click tracking.")
-      .meta({ example: ["dub.sh"] }),
+      .meta({ example: ["srb.gg"] }),
     ssoEmailDomain: z.string().nullable(),
     ssoEnforcedAt: z.date().nullable(),
   })

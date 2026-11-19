@@ -44,7 +44,7 @@ export default function WorkspaceDisabled({
     full: true,
   });
 
-  const upgradeUrl = `https://app.dub.co/${slug}/settings/billing/upgrade?plan=advanced&planPeriod=yearly`;
+  const upgradeUrl = `https://app.srb.gg/${slug}/settings/billing/upgrade?plan=advanced&planPeriod=yearly`;
 
   return (
     <Html>
@@ -65,7 +65,7 @@ export default function WorkspaceDisabled({
             <Text className="text-sm leading-6 text-black">
               Your Dub workspace,{" "}
               <Link
-                href={`https://app.dub.co/${slug}`}
+                href={`https://app.srb.gg/${slug}`}
                 className="text-black underline"
               >
                 <strong>{name}</strong>

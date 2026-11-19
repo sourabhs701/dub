@@ -58,7 +58,7 @@ export default function DisabledLinkPage() {
             "animate-slide-up-fade motion-reduce:animate-fade-in [--offset:5px] [animation-delay:300ms] [animation-duration:1s] [animation-fill-mode:both]",
           )}
         >
-          <ButtonLink variant="primary" href="https://app.dub.co/register">
+          <ButtonLink variant="primary" href="https://app.srb.gg/register">
             Try Dub today
           </ButtonLink>
           <LearnMoreButton utmParams={UTM_PARAMS} />

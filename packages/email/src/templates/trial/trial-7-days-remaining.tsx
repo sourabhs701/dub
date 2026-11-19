@@ -57,7 +57,7 @@ export default function Trial7DaysRemainingEmail({
         <Text style={footerStyle}>
           If you&apos;d like me to stop sending you emails, please{" "}
           <Link
-            href="https://app.dub.co/account/settings"
+            href="https://app.srb.gg/account/settings"
             style={footerLinkStyle}
           >
             click here

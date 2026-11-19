@@ -18,8 +18,8 @@ import { OAUTH_SCOPE_DESCRIPTIONS, OAUTH_SCOPES } from "../api/oauth/constants";
 //         "type": "oauth2",
 //         "flows": {
 //           "authorizationCode": {
-//             "authorizationUrl": "https://app.dub.co/oauth/authorize",
-//             "tokenUrl": "https://api.dub.co/oauth/token",
+//             "authorizationUrl": "https://app.srb.gg/oauth/authorize",
+//             "tokenUrl": "https://api.srb.gg/oauth/token",
 //             "scopes": { "links.read": "Read access to links", ... }
 //           }
 //         }
@@ -40,8 +40,8 @@ export function getMcpDocument(): typeof document {
         description: "OAuth 2.0 authentication",
         flows: {
           authorizationCode: {
-            authorizationUrl: "https://app.dub.co/oauth/authorize",
-            tokenUrl: "https://api.dub.co/oauth/token",
+            authorizationUrl: "https://app.srb.gg/oauth/authorize",
+            tokenUrl: "https://api.srb.gg/oauth/token",
             scopes: Object.fromEntries(
               OAUTH_SCOPES.map((scope) => [
                 scope,

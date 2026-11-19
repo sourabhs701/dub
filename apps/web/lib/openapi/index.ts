@@ -34,7 +34,7 @@ export const document = createDocument({
   },
   servers: [
     {
-      url: "https://api.dub.co",
+      url: "https://api.srb.gg",
       description: "Production API",
     },
   ],

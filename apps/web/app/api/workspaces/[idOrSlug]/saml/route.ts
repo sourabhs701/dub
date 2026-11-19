@@ -41,7 +41,7 @@ export const GET = withWorkspace(
       issuer: samlAudience,
       acs:
         process.env.NODE_ENV === "production"
-          ? "https://api.dub.co/auth/saml/callback"
+          ? "https://api.srb.gg/auth/saml/callback"
           : `${APP_DOMAIN_WITH_NGROK}/api/auth/saml/callback`,
     };
 

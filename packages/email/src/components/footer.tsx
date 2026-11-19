@@ -3,7 +3,7 @@ import { Hr, Link, Tailwind, Text } from "@react-email/components";
 export function Footer({
   email,
   marketing,
-  unsubscribeUrl = "https://app.dub.co/account/settings",
+  unsubscribeUrl = "https://app.srb.gg/account/settings",
   notificationSettingsUrl,
 }: {
   email: string;

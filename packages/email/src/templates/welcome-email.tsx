@@ -31,8 +31,8 @@ export default function WelcomeEmail({
   unsubscribeUrl: string;
 }) {
   const workspaceUrl = workspace
-    ? `https://app.dub.co/${workspace?.slug}`
-    : "https://app.dub.co";
+    ? `https://app.srb.gg/${workspace?.slug}`
+    : "https://app.srb.gg";
 
   return (
     <Html>
@@ -117,7 +117,7 @@ export default function WelcomeEmail({
             <Text className="mb-4 text-sm leading-6 text-neutral-600">
               2. Track conversions:{" "}
               <Link
-                href="https://app.dub.co/settings/tracking"
+                href="https://app.srb.gg/settings/tracking"
                 className="text-neutral-600 underline underline-offset-2"
               >
                 Install the Dub tracking script
@@ -150,7 +150,7 @@ export default function WelcomeEmail({
             <Section className="my-8">
               <Link
                 className="rounded-lg bg-black px-4 py-2.5 text-center text-[14px] font-medium text-white no-underline"
-                href="https://app.dub.co"
+                href="https://app.srb.gg"
               >
                 Go to your dashboard
               </Link>

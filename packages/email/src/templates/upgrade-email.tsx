@@ -51,7 +51,7 @@ export default function UpgradeEmail({
           If you don't want to receive these emails, you can adjust your email
           preferences{" "}
           <Link
-            href="https://app.dub.co/account/settings"
+            href="https://app.srb.gg/account/settings"
             style={footerLinkStyle}
           >
             here

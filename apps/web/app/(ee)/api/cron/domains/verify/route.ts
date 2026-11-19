@@ -23,7 +23,7 @@ export const GET = withCron(async () => {
       slug: {
         // exclude domains that belong to us
         notIn: [
-          "dub.sh",
+          "srb.gg",
           "chatg.pt",
           "amzn.id",
           "spti.fi",

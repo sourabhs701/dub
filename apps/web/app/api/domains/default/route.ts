@@ -1,7 +1,7 @@
 import { withWorkspace } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { getDefaultDomainsQuerySchema } from "@/lib/zod/schemas/domains";
-import { DUB_DOMAINS_ARRAY } from "@dub/utils";
+import { DUB_DOMAINS_ARRAY, SHORT_DOMAIN } from "@dub/utils";
 import { NextResponse } from "next/server";
 import * as z from "zod/v4";
 
@@ -33,7 +33,10 @@ export const GET = withWorkspace(
         .filter((key) => data[key])
         .map(
           (domain) =>
-            DUB_DOMAINS_ARRAY.find((d) => d.replace(".", "") === domain)!,
+            // the `dubsh` column stores the primary short domain (SHORT_DOMAIN)
+            domain === "dubsh"
+              ? SHORT_DOMAIN
+              : DUB_DOMAINS_ARRAY.find((d) => d.replace(".", "") === domain)!,
         )
         .filter((domain) =>
           search ? domain?.toLowerCase().includes(search.toLowerCase()) : true,
@@ -63,7 +66,7 @@ export const PATCH = withWorkspace(
         projectId: workspace.id,
       },
       data: {
-        dubsh: defaultDomains.includes("dub.sh"),
+        dubsh: defaultDomains.includes(SHORT_DOMAIN),
         chatgpt: defaultDomains.includes("chatg.pt"),
         sptifi: defaultDomains.includes("spti.fi"),
         gitnew: defaultDomains.includes("git.new"),

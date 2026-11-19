@@ -31,23 +31,23 @@ export default function DubWrapped({
   },
   topLinks = [
     {
-      item: "dub.sh/link",
+      item: "srb.gg/link",
       count: 13923,
     },
     {
-      item: "dub.sh/link",
+      item: "srb.gg/link",
       count: 2225,
     },
     {
-      item: "dub.sh/link",
+      item: "srb.gg/link",
       count: 423,
     },
     {
-      item: "dub.sh/link",
+      item: "srb.gg/link",
       count: 325,
     },
     {
-      item: "dub.sh/link",
+      item: "srb.gg/link",
       count: 233,
     },
   ],
@@ -350,7 +350,7 @@ const StatTable = ({
                 {title === "Top Links" ? (
                   <div className="py-2">
                     <Link
-                      href={`https://app.dub.co/${workspaceSlug}/analytics?domain=${domain}&key=${path}&interval=1y`}
+                      href={`https://app.srb.gg/${workspaceSlug}/analytics?domain=${domain}&key=${path}&interval=1y`}
                       className="font-medium text-black underline underline-offset-2"
                     >
                       {smartTruncate(item, 33)} ↗

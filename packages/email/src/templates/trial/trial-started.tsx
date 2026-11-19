@@ -40,7 +40,7 @@ export default function TrialStartedEmail({
   };
 }) {
   const planLabel = capitalize(plan);
-  const dashboardUrl = `https://app.dub.co/${workspace.slug}`;
+  const dashboardUrl = `https://app.srb.gg/${workspace.slug}`;
 
   return (
     <Html>
@@ -173,7 +173,7 @@ export default function TrialStartedEmail({
             <Text className="mb-8 text-sm leading-5 text-neutral-800">
               You&apos;ll have access to all{" "}
               <Link
-                href={`https://app.dub.co/${workspace.slug}/settings/billing/upgrade`}
+                href={`https://app.srb.gg/${workspace.slug}/settings/billing/upgrade`}
                 className="font-medium text-neutral-500 underline underline-offset-2"
               >
                 {planLabel} features

@@ -1,7 +1,7 @@
 import { get } from "@vercel/edge-config";
 
 /**
- * Only for dub.sh domain
+ * Only for srb.gg domain
  * Check if a username is reserved – should only be available on Pro+
  */
 export const isReservedUsername = async (key: string) => {

@@ -153,7 +153,7 @@ export async function LinkMiddleware(req: NextRequest, ev: NextFetchEvent) {
     isSingularTrackingUrl(url) ||
     isAppsFlyerTrackingUrl(url);
 
-  // by default, we only index default dub domain links (e.g. dub.sh)
+  // by default, we only index default dub domain links (e.g. srb.gg)
   // everything else is not indexed by default, unless the user has explicitly set it to be indexed
   const shouldIndex = isDubDomain(domain) || doIndex === true;
 
@@ -269,7 +269,7 @@ export async function LinkMiddleware(req: NextRequest, ev: NextFetchEvent) {
     }
   }
 
-  // for Google click tracker domains (dub.sh, dub.link):
+  // for Google click tracker domains (srb.gg, dub.link):
   // if there is a redirection url set, then use it instead of the target
   if (isGoogleClickTrackerDomain(domain)) {
     const redirectionUrl = searchParamsObj[REDIRECTION_QUERY_PARAM];

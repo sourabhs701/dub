@@ -84,7 +84,7 @@ export default function LinksImported({
               </strong>{" "}
               from {provider} into your Dub workspace,{" "}
               <Link
-                href={`https://app.dub.co/${workspaceSlug}`}
+                href={`https://app.srb.gg/${workspaceSlug}`}
                 className="font-medium text-blue-600 no-underline"
               >
                 {workspaceName}↗
@@ -127,7 +127,7 @@ export default function LinksImported({
               <Section className="my-8">
                 <Link
                   className="rounded-lg bg-black px-6 py-3 text-center text-[12px] font-semibold text-white no-underline"
-                  href={`https://app.dub.co/${workspaceSlug}`}
+                  href={`https://app.srb.gg/${workspaceSlug}`}
                 >
                   View {Intl.NumberFormat("en-us").format(count - 5)} more links
                 </Link>

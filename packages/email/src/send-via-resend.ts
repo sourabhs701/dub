@@ -1,6 +1,10 @@
 import type { CreateEmailOptions } from "resend";
 import { resend } from "./resend";
-import { VARIANT_TO_FROM_MAP } from "./resend/constants";
+import {
+  DEFAULT_REPLY_TO,
+  EMAIL_APP_URL,
+  VARIANT_TO_FROM_MAP,
+} from "./resend/constants";
 import { ResendBulkEmailOptions, ResendEmailOptions } from "./resend/types";
 
 // Resend 422s reserved test domains:
@@ -62,7 +66,7 @@ const resendEmailForOptions = (
     bcc,
     // if replyTo is set to "noreply@dub.co", don't set replyTo
     // else set it to the value of replyTo or fallback to support@dub.co
-    ...(replyTo === "noreply" ? {} : { replyTo: replyTo || "support@dub.co" }),
+    ...(replyTo === "noreply" ? {} : { replyTo: replyTo || DEFAULT_REPLY_TO }),
     scheduledAt,
     tags,
     ...(variant === "marketing"
@@ -70,7 +74,7 @@ const resendEmailForOptions = (
           headers: {
             ...(headers || {}),
             "List-Unsubscribe":
-              unsubscribeUrl || "https://app.dub.co/account/settings",
+              unsubscribeUrl || `${EMAIL_APP_URL}/account/settings`,
           },
         }
       : headers && { headers }),
