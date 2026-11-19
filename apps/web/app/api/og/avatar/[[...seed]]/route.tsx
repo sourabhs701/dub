@@ -2,7 +2,7 @@ import { getAvatarTheme } from "@dub/utils";
 import { ImageResponse } from "next/og";
 import { NextRequest } from "next/server";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // was "edge": Vercel Hobby caps edge functions at 1 MB
 
 export async function GET(
   req: NextRequest,

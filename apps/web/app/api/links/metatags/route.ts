@@ -4,7 +4,7 @@ import { getUrlQuerySchema } from "@/lib/zod/schemas/links";
 import { NextRequest, NextResponse } from "next/server";
 import { getMetaTags } from "./utils";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // was "edge": Vercel Hobby caps edge functions at 1 MB
 
 export async function GET(req: NextRequest) {
   try {

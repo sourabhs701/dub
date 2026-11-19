@@ -8,7 +8,7 @@ import {
 import { getSearchParams, isIframeableFromHeaders } from "@dub/utils";
 import { NextRequest, NextResponse } from "next/server";
 
-export const runtime = "edge";
+export const runtime = "nodejs"; // was "edge": Vercel Hobby caps edge functions at 1 MB
 
 export async function GET(req: NextRequest) {
   try {

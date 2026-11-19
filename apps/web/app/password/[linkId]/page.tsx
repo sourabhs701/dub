@@ -9,7 +9,7 @@ import { notFound, redirect } from "next/navigation";
 import PasswordForm from "./form";
 
 export const dynamic = "force-dynamic";
-export const runtime = "edge";
+export const runtime = "nodejs"; // was "edge": Vercel Hobby caps edge functions at 1 MB
 
 const title = "Password Required";
 const description =
