@@ -147,7 +147,7 @@ module.exports = withPlausibleProxy({
         missing: [
           {
             type: "host",
-            value: ".*(\\.dub\\.co|localhost)",
+            value: ".*(\\.srb\\.gg|localhost)",
           },
         ],
         destination: "/",
