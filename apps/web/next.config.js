@@ -36,7 +36,14 @@ module.exports = withPlausibleProxy({
       "./node_modules/openid-client/**/*",
     ],
   },
+  // Vercel Hobby build machines (8 GB) OOM on this app. With LOW_MEMORY_BUILD=1,
+  // skip the in-build type-check/lint workers (run `tsc`/lint separately/CI).
+  ...(process.env.LOW_MEMORY_BUILD === "1" && {
+    typescript: { ignoreBuildErrors: true },
+    eslint: { ignoreDuringBuilds: true },
+  }),
   experimental: {
+    webpackMemoryOptimizations: true,
     optimizePackageImports: [
       "@dub/email",
       "@dub/ui",
